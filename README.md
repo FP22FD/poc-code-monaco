@@ -1,2 +1,1 @@
-# poc-code-monaco
- 
+# POC for Monaco Editor
