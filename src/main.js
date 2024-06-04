@@ -30,7 +30,7 @@ self.MonacoEnvironment = {
   }
 }
 
-monaco.editor.create(document.getElementById('container'), {
+const editor = monaco.editor.create(document.getElementById('container'), {
   value: "function hello() {\n\talert('Hello world!');\n}",
   language: 'javascript',
   fontSize: 16,
@@ -46,7 +46,10 @@ monaco.editor.create(document.getElementById('container'), {
 
 monaco.editor.setTheme('vs-dark');
 
-
+document.querySelector('#btnReadValue').addEventListener('click', (ev) => {
+  const value = editor.getValue();
+  console.log({ value })
+})
 
 
 
