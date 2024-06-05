@@ -39,6 +39,8 @@ const editor = monaco.editor.create(document.getElementById('container'), {
     enabled: false,
   },
   scrollBeyondLastLine: false,
+  // ref. https://stackoverflow.com/a/47163918
+  automaticLayout: true,
 })
 
 // monaco.editor.defineTheme('monokai', customTheme);
@@ -50,23 +52,3 @@ document.querySelector('#btnReadValue').addEventListener('click', (ev) => {
   const value = editor.getValue();
   console.log({ value })
 })
-
-
-
-
-
-
-
-// import * as monaco from 'monaco-editor';
-
-// monaco.editor.create(document.querySelector('p'), {
-//   value: 'console.log("Hello, world")',
-//   language: 'javascript',
-// });
-
-// import { monaco } from './customMonaco.js';
-
-// monaco.editor.create(document.querySelector('div'), {
-//   value: 'console.log("Hello, world")',
-//   language: 'javascript',
-// });
